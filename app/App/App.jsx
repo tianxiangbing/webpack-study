@@ -1,10 +1,12 @@
 import React from 'react';
-import Style from './_App.scss';
+import styles from './_App.scss';
 
 export default class App extends React.Component{
     render(){
         return (
-            <div>bodyasdf</div>
+            <div>bodya
+                <span className={styles.mycss}>sdf</span>
+            </div>
         );
     }
 }

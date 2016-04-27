@@ -20065,7 +20065,12 @@
 	            return _react2.default.createElement(
 	                'div',
 	                null,
-	                'bodyasdf'
+	                'bodya',
+	                _react2.default.createElement(
+	                    'span',
+	                    { className: _App2.default.mycss },
+	                    'sdf'
+	                )
 	            );
 	        }
 	    }]);
@@ -20079,8 +20084,10 @@
 /* 168 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
 	"use strict";
+	
+	// removed by extract-text-webpack-plugin
+	module.exports = { "mycss": "_11n0p6YrmZLM1pOKKqJoId" };
 
 /***/ }
 /******/ ]);
