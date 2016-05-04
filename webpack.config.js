@@ -1,10 +1,13 @@
 var path = require("path");
+var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var extractCSS = new ExtractTextPlugin('stylesheets/[name].css');
+//var ignoreFiles = new webpack.IgnorePlugin(new RegExp("^(jquery|react|react-dom)$"));
 module.exports = {
-    devtool: "source-map",
+    //devtool: "source-map",
     entry: {
-        app: ["./app/app.jsx"]
+        app: ["./app/app.jsx"],
+        vendor:["react","react-dom"]
     },
     output: {
         path: path.resolve(__dirname, "build"),
@@ -31,6 +34,8 @@ module.exports = {
         ]
     },
     plugins: [
-        extractCSS
+        extractCSS,
+        //ignoreFiles
+        new webpack.optimize.CommonsChunkPlugin("vendor", "base.js")
     ]
 };
