@@ -5,7 +5,7 @@ export default class App extends React.Component{
     render(){
         return (
             <div>bodya
-                <span className={styles.mycss}>sdf</span>
+                <span className="mycss">sdf</span>
             </div>
         );
     }

@@ -1,7 +1,10 @@
 var path = require("path");
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var extractCSS = new ExtractTextPlugin('stylesheets/[name].css');
+console.log(process.env.NODE_ENV)
+var TEST = process.env.NODE_ENV === "test" ;
+var filename= TEST?"[name]":"[chunkhash:8].[name]";
+var extractCSS = new ExtractTextPlugin('stylesheets/'+filename+'.css');
 //var ignoreFiles = new webpack.IgnorePlugin(new RegExp("^(jquery|react|react-dom)$"));
 module.exports = {
     //devtool: "source-map",
@@ -12,7 +15,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "build"),
         publicPath: "/assets/",
-        filename: "[name].js"
+        filename: filename+".js"
     },
     resolve: {
         modulesDirectories: ["web_modules", "node_modules", "bower_components"],
@@ -29,7 +32,7 @@ module.exports = {
         },
             {
                 test:/\.scss$/,
-                loader:extractCSS.extract('style-loader','css?modules&sourceMap!sass')
+                loader:extractCSS.extract('style-loader','css?sourceMap!sass')
             }
         ]
     },
