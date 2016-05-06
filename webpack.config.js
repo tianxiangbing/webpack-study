@@ -1,8 +1,13 @@
 var path = require("path");
 var webpack = require('webpack');
+
+console.log(process.env.NODE_ENV)
+var TEST = process.env.NODE_ENV === "test" ;
+var filename= TEST?"[name]":"[chunkhash:8].[name]";
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var extractCSS = new ExtractTextPlugin('stylesheets/[chunkhash:8].[name].css');
+var extractCSS = new ExtractTextPlugin('stylesheets/'+filename+'.css');
 //var ignoreFiles = new webpack.IgnorePlugin(new RegExp("^(jquery|react|react-dom)$"));//排除文件，但不能再打包这个文件了
+
 //动态创建html
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var htmlPlugin = new HtmlWebpackPlugin({
@@ -20,7 +25,7 @@ module.exports = {
         path: path.resolve(__dirname, "build"),
         //publicPath: "/assets/",
         publicPath:"build",
-        filename: "[chunkhash:8].[name].js"//文件名取hash8位，默认16位
+        filename: filename+".js"//文件名取hash8位，默认16位
     },
     resolve: {
         modulesDirectories: ["web_modules", "node_modules", "bower_components"],

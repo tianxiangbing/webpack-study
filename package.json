@@ -4,7 +4,10 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart":"npm install",
+    "start":"set NODE_ENV=test && node server",
+    "build":"set NODE_ENV=publish && webpack -p"
   },
   "author": "",
   "license": "ISC",
