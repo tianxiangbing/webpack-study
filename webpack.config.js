@@ -1,9 +1,11 @@
 var path = require("path");
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-console.log(process.env.NODE_ENV)
-var TEST = process.env.NODE_ENV === "test" ;
+console.log("+++++++++++"+process.env.NODE_ENV+"***********")
+var TEST = process.env.NODE_ENV == "test" ;
+console.log(TEST)
 var filename= TEST?"[name]":"[chunkhash:8].[name]";
+console.log(filename)
 var extractCSS = new ExtractTextPlugin('stylesheets/'+filename+'.css');
 //var ignoreFiles = new webpack.IgnorePlugin(new RegExp("^(jquery|react|react-dom)$"));
 module.exports = {
