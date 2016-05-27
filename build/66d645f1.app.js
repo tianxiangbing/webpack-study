@@ -17,9 +17,9 @@ webpackJsonp([0],{
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactDom = __webpack_require__(34);
+	var _reactDom = __webpack_require__(33);
 
-	var _App = __webpack_require__(169);
+	var _App = __webpack_require__(164);
 
 	var _App2 = _interopRequireDefault(_App);
 
@@ -29,7 +29,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 169:
+/***/ 164:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44,7 +44,7 @@ webpackJsonp([0],{
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _App = __webpack_require__(170);
+	var _App = __webpack_require__(165);
 
 	var _App2 = _interopRequireDefault(_App);
 
@@ -55,6 +55,8 @@ webpackJsonp([0],{
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	//import css from '../scss/iconfont.css';
 
 	var App = function (_React$Component) {
 	    _inherits(App, _React$Component);
@@ -74,7 +76,7 @@ webpackJsonp([0],{
 	                'bodya',
 	                _react2.default.createElement(
 	                    'span',
-	                    { className: _App2.default.mycss },
+	                    { className: 'mycss' },
 	                    'sdf'
 	                )
 	            );
@@ -88,13 +90,11 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 170:
+/***/ 165:
 /***/ function(module, exports) {
 
-	"use strict";
-
 	// removed by extract-text-webpack-plugin
-	module.exports = { "mycss": "_11n0p6YrmZLM1pOKKqJoId" };
+	"use strict";
 
 /***/ }
 
