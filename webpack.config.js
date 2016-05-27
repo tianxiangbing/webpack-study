@@ -20,7 +20,7 @@ var htmlPlugin = new HtmlWebpackPlugin({
 var config ={
     entry: {
         app: ["./app/app.jsx"],
-        vendor:["react","react-dom",'whatwg-fetch','react-router']
+        vendor:["react","react-dom"]
     },
     output: {
         path: path.resolve(__dirname, "build"),
